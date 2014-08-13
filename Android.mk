@@ -24,7 +24,8 @@ LOCAL_PATH := $(call my-dir)
 
 ifeq ($(BOARD_VENDOR),samsung)
 ifeq ($(call is-board-platform-in-list,msm8974 msm8960 msm8660),true)
+ifeq ($(filter NEXT_IS_NOT_BEST,$(TARGET_FUNNY_CATCHPHRASE)),)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 endif
 endif
-
+endif
